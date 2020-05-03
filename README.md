@@ -29,8 +29,18 @@ SD Card installed:
 
 [Instructions on Supplicant wifi](https://core-electronics.com.au/tutorials/raspberry-pi-zerow-headless-wifi-setup.html)
 
-1. create wpa_supplicant.conf with wifi details
-2. create an empty ssh file to enable ssh
+1. create *wpa_supplicant.conf* with wifi details
+```
+country=GB
+ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+update_config=1
+network={
+	ssid="MyWiFiNetwork"
+	psk="aVeryStrongPassword"
+	key_mgmt=WPA-PSK
+}
+```
+2. create an empty file called *ssh* to enable ssh
 
 # 5. Boot raspberry pi
 
@@ -40,7 +50,7 @@ Default username
 Default password
 > raspberry
 
-Go to router and check if the raspberrypi have connected to the network
+Go to router and check if the raspberrypi have connected to the network via wifi. For multiple raspberrypis, use the ip address of the new pi.
 
 ssh into raspberry
 > ssh pi@raspberrypi
