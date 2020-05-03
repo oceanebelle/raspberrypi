@@ -27,6 +27,8 @@ SD Card installed:
 
 # 4.a enable wifi and ssh before booting by modifying the SDcard directly
 
+Create the following two files at the root of the SDCard
+
 [Instructions on Supplicant wifi](https://core-electronics.com.au/tutorials/raspberry-pi-zerow-headless-wifi-setup.html)
 
 1. create *wpa_supplicant.conf* with wifi details
@@ -42,6 +44,8 @@ network={
 ```
 2. create an empty file called *ssh* to enable ssh
 
+Safely eject the SDCard and install back to raspberrypi
+
 # 5. Boot raspberry pi
 
 Default username
@@ -54,6 +58,7 @@ Go to router and check if the raspberrypi have connected to the network via wifi
 
 ssh into raspberry
 > ssh pi@raspberrypi
+
 
 # 6. Configure your rasperry
 
